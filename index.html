@@ -152,11 +152,11 @@
       <p class = "pt-3">
 
         <b><u>What's was this?</b></u> I built and <i>formerly</i> hosted a humorous chatroom utility bot with <b>AWS / GCP</b> servers and <b>MySQL</b> databases using the <a href="https://discord.js.org/#/">Discord.Js API</a>.
-        <br><u><b>What did it do?</b></u> It lets users flag one another, where if enough unique users flag one user, it performs an action on the flagged user. I built <a href="https://youtu.be/fLJBzhcSWTk?t=108">Socrate's tradjedy <small>(video)</small></a>.
-        <br> &emsp;- <b>MySQL </b> to support settings editable by chatroom owners. <small>I never hosted this version publicly.</small>
+        <br><u><b>What did it do?</b></u> It lets users vote against one another, where if a user reaches a number of votes, it mutes or kicks them from the server.
+        <br> &emsp;- I used <b>MySQL </b> on AWS to support settings editable by chatroom owners, and a method of collecting user data. <small>I never hosted this version publicly due to lack of profitability, but I did host it for a school assignment.</small>
 
         <br><br><b><u>Notable challenges...</b></u> 
-        <br>- <b>Hosting and Maintence: </b>Trying to keep uptime and functionality despite deprecated APIs and <a href = "https://support.discord.com/hc/en-us/articles/4413259614487-Message-Content-Intent-Alternatives-Workarounds">mandatory changes</a>.
+        <br>- <b>Hosting and Maintence: </b>Trying to keep uptime and functionality despite deprecated APIs.
         <br>- <b>Managing cloud costs: </b>Reading cost reports and trimming unused resources. 
         <br>- <b>Memory leak: </b>Keeping track of the votes that are occuring and ensuring they are deleted when they expire or are done. Undeleted votes would have piled up in RAM, eating memory until the next reboot.
         <br>- <b>Protecting users: </b>Not leaking keys <small>(probably)</small> and preventing odd use cases from manipulating vote counts.
